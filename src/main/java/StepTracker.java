@@ -7,13 +7,13 @@ public class StepTracker
  public StepTracker(int n)
  {
   min = n;
-  numDays = 0;
+  numActiveDays = 0;
   totalSteps = 0;
  }
  public void addDailySteps(int n)
  {
   if(n>=min)
-   numDays++;
+   numActiveDays++;
   totalSteps+=n;
  }
  public int activeDays()
@@ -22,6 +22,6 @@ public class StepTracker
  }
  public double averageSteps()
  {
-  return (double)totalSteps/numDays;
+  return (double)totalSteps/numActiveDays;
  }
 } 
